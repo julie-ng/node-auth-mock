@@ -5,6 +5,11 @@
 pipeline {
     agent any
 
+    options {
+        timestamps()
+        buildDiscarder(logRotator(numToKeepStr: '3'))
+    }
+
     tools {
         nodejs 'node-8'
     }
