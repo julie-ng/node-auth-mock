@@ -1,14 +1,14 @@
-# Node AuthService Mock
+# Node.js Mock - Authentication Service
 
-This a simple AuthService mock that can be used for experiments.
+This a simple Authentication Service mock that can be used for experiments.
 
 ## User Store
 
-This app does not have any store. It abuses environment variables to store users, for example the user 'bensl' with password 'secret' would be set like this:
+This app does not have any store. It abuses environment variables to store users, for example the user 'demo' with password 'secret' would be set like this:
 
-`USER_BENSL=secret`
+`USER_DEMO=secret`
 
-To set multiple users, just set multiple variables. Usernames are case-insensitive. 
+To set multiple users, just set multiple variables. Usernames are case-insensitive.
 
 This avoids hard-coding credentials into the code. But it's just a mock. **DO NOT USE FOR REAL**.
 
@@ -40,6 +40,6 @@ Accepts JSON in the following structure:
 ```
 login: {
   "user": "username",
-  "password": "secret" 
+  "password": "secret"
 }
 ```
