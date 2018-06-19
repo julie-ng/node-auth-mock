@@ -34,6 +34,9 @@ pipeline {
         }
 
         stage('Unit Tests') {
+            environment {
+                PORT = randomPort()
+            }
             steps {
                 sh 'npm run test'
             }
