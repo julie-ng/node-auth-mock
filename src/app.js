@@ -8,6 +8,13 @@ const port = process.env.PORT || 3000;
 web.use(bodyParser.json({ limit: '50mb' }));
 web.use(bodyParser.urlencoded({ extended: false }));
 
+web.all('*', function (req, res, next) {
+  if (process.env.NODE_ENV !== 'test') {
+    console.log(`${req.method} ${req.path}`, req.body);
+  }
+  next();
+});
+
 web.get('/', function (req, res) {
   res.status(403).end();
 });
