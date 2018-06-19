@@ -34,6 +34,7 @@ describe ('web layer', () => {
     it ('returns a status json', (done) => {
       request.get(url('/api/status'), (error, response, body) => {
         let res  = JSON.stringify({
+          name: 'auth-service',
           status: 200,
           message: 'healthy'
         });

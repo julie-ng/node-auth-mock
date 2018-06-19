@@ -26,6 +26,7 @@ web.post('/api/login', function (req, res) {
 
 web.get('/api/status', function (req, res) {
   res.json({
+    name: 'auth-service',
     status: 200,
     message: 'healthy'
   });
