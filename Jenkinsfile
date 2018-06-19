@@ -1,3 +1,7 @@
+#!/usr/bin/env groovy
+
+@Library('demo-pipeline-library@dev') _
+
 pipeline {
     agent any
 
