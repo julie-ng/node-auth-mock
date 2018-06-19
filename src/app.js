@@ -35,5 +35,3 @@ web.get('/api/status', function (req, res) {
 web.listen(port, function () {
   console.log(`Listening on port ${port}`);
 });
-
-export { web as app };
