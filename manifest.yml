@@ -1,8 +1,10 @@
 ---
 applications:
-- name: node-auth-service-mock
+- name: auth-service-mock
   command: npm start
-  memory: 256M
+  memory: 64M
   instances: 1
   health-check-type: http
-  health-check-http-endpoint: /status
+  health-check-http-endpoint: /api/status
+  env:
+    USER_DEMO: secret
